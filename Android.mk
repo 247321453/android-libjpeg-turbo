@@ -5,6 +5,8 @@ LOCAL_MODULE := libjpeg-turbo
 
 SOURCE_PATH := libjpeg-turbo-2.0.1
 
+LOCAL_C_INCLUDES += ${SOURCE_PATH}
+
 ifneq ($(filter $(TARGET_ARCH_ABI), armeabi-v7a armeabi-v7a-hard x86),)
 LOCAL_ARM_NEON := true
 LOCAL_CFLAGS += -D__ARM_HAVE_NEON
